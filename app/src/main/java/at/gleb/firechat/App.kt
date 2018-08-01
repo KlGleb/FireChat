@@ -22,33 +22,9 @@
  * SOFTWARE.
  */
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+package at.gleb.firechat
 
-buildscript {
-  ext.kotlin_version = '1.2.51'
+import android.support.multidex.MultiDexApplication
 
-  repositories {
-    google()
-    jcenter()
-  }
-  dependencies {
-    classpath 'com.android.tools.build:gradle:3.1.3'
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
-
-    // NOTE: Do not place your application dependencies here; they belong
-    // in the individual module build.gradle files
-    classpath 'com.google.gms:google-services:4.0.1'
-  }
-}
-
-allprojects {
-  repositories {
-    google()
-    jcenter()
-  }
-}
-
-task clean(type: Delete) {
-  delete rootProject.buildDir
+class App: MultiDexApplication() {
 }
